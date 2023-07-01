@@ -24,12 +24,6 @@ const start = async () => {
   }
 };
 
-// const newUser = new User({
-//   name: "John Doe",
-//   email: "johndoe@example.com",
-//   password: "23245",
-// });
-
 // // Save the new user to the database
 // newUser.save().then((res) => console.log(res));
 
