@@ -1,7 +1,7 @@
 const express = require("express");
-const route = require("./Router/routes");
+const router = require("./Router/routes");
 
 const app = express();
 const PORT = 3000;
 
-app.use("/api/v1/", route); //basic routes
+app.use("/api/v1/", router); //basic routes
