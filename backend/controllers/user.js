@@ -59,7 +59,7 @@ app.post(
     failureFlash: true,
   })
 );
-app.delete("/auth/login/logout", (req, res) => {
+app.delete("/auth/logout", (req, res) => {
   req.logOut();
   res.redirect('"/auth/login" ');
 });
