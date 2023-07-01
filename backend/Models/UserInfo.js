@@ -18,7 +18,7 @@ const travellingSchema = new mongoose.Schema({
   price: Number,
 });
 
-// Schema for User
+// Schema for UserInfo
 const userInfoSchema = new mongoose.Schema({
   name: String,
   food: foodSchema,

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//schma for bill
 const billSchema = mongoose.Schema(
   {
     amount: {
