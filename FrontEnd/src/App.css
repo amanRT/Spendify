@@ -4,7 +4,7 @@ body {
 }
 /*^ Hero Section */
 .Hero {
-	position: absolute;
+	position: relative;
 	box-sizing: border-box;
 	flex-shrink: 0;
 	height: min-content;
@@ -17,13 +17,15 @@ body {
 	position: relative;
 	flex-wrap: nowrap;
 	width: 100%;
+	z-index: 2;
 }
+
 .brand-slogan {
 	flex-shrink: 0;
 	max-width: 50vw;
 	height: auto; /* 238px */
 	z-index: 2;
-	font-size: 3rem;
+	font-size: clamp(2vw, 4vw, 9vw);
 	font-weight: 600;
 	font-style: normal;
 	font-family: "Poppins", sans-serif;
@@ -34,44 +36,40 @@ body {
 
 .getStarted {
 	letter-spacing: 0.5px;
-	flex-shrink: 0;
-	width: fit-content;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
 	align-items: center;
 	padding: 0.8rem 1rem 0.8rem 1rem;
 	background-image: linear-gradient(to right, #00fafc, #f854d9);
 	position: relative;
-	align-content: center;
-	gap: 10;
 	color: white;
 	border-radius: 2rem;
 	border-color: white;
 	cursor: pointer;
+	text-align: center;
+	max-width: clamp(13vw, 20vw, 30vw);
+	font-size: clamp(1vw, 1.3vw, 1.7vw);
+	max-height: clamp(1vw, 4vw, 7vw);
 }
 
 .img-section {
 	position: absolute;
 	top: 0;
 	right: 0;
+	z-index: -1;
 }
 
 .image {
-	width: 50rem;
+	max-width: clamp(20vw, 50vw, 80vw);
+	max-height: clamp(30vw, 60vw, 90vw);
 }
 
 /*^ Text Section */
 .Text {
 	position: relative;
-	box-sizing: border-box;
-	flex-shrink: 0;
-	align-items: center;
 	padding: 8vw 10vw;
 	background-color: #000000;
 	overflow: hidden;
 	flex: 1 0 0px;
-	align-content: center;
 	flex-wrap: nowrap;
 	z-index: -2;
 }
@@ -83,11 +81,11 @@ body {
 }
 
 .text-image {
-	width: 18rem;
+	max-width: clamp(15vw, 25vw, 50vw);
 }
 
 .text-container {
-	width: 40vw;
+	max-width: 40vw;
 }
 .text-container h1 {
 	font-family: "Unbounded", sans-serif;
@@ -98,18 +96,20 @@ body {
 	font-weight: 700;
 	font-size: 3rem;
 	color: rgb(220, 152, 26);
+	font-size: clamp(5vw, 5vw, 9vw);
 	letter-spacing: 3px;
 }
 .text-container p {
 	color: #3bceac;
-	font-size: 1.5rem;
+	font-size: clamp(1vw, 2vw, 4vw);
 	line-height: 1.5;
 	text-align: left;
 	font-family: "Nunito", "Nunito Placeholder", sans-serif;
 }
 
 .t_image {
-	width: 45rem;
+	width: clamp(40vw, 55vw, 80vw);
+	filter: contrast(60%);
 }
 
 .t_image-container-2 {
@@ -133,21 +133,17 @@ body {
 	z-index: -2;
 }
 .f-heading {
-	flex-shrink: 0;
-	overflow: visible;
 	width: 100%;
-	flex: 1 0 0px;
 	position: relative;
 	font-weight: 700;
-	font-style: normal;
 	font-family: "Unbounded", sans-serif;
 	color: #ee4266;
-	font-size: 3rem;
+	font-size: clamp(2vw, 3vw, 7vw);
 	line-height: 1.2;
 	text-align: left;
 }
 
-.f-content{
+.f-content {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -162,39 +158,32 @@ body {
 	overflow: visible;
 	flex: 1 0 0px;
 	flex-wrap: nowrap;
-	gap: 2rem;
+	gap: clamp(1.1vw, 2.3vw, 3vw);
 	list-style: none;
 }
 
 .f-list h2 {
 	flex-shrink: 0;
-	height: auto;
-	flex: 1 0 0px;
-	position: relative;
 	font-weight: 400;
-	font-style: normal;
 	font-family: "Nunito", "Nunito Placeholder", sans-serif;
 	color: #ee4266;
-	font-size: 1.7rem;
+	font-size: clamp(1.1vw, 2.3vw, 4vw);
 	line-height: 1.5;
 	text-align: left;
 }
 
 .f_list-dscrp {
-	overflow: visible;
-	flex: 1 0 0px;
 	position: relative;
-	font-weight: 400;
 	font-style: normal;
 	font-family: "Nunito", "Nunito Placeholder", sans-serif;
 	color: #3bceac;
-	font-size: 1rem;
+	font-size: clamp(0.8vw, 1.1vw, 2vw);
 	line-height: 1.5;
 	text-align: left;
 }
 
-.f-img{
-	width: 35vw;
+.f-img {
+	max-width: clamp(22vw, 35vw, 40vw);
 	border-radius: 0.5rem;
 }
 
@@ -212,6 +201,7 @@ body {
 	overflow: hidden;
 	flex: 1 0 0px;
 	color: #ffffff;
+	z-index: -2;
 }
 
 .review-cards {
@@ -244,17 +234,17 @@ body {
 	border: 2px solid red;
 }
 
-.P1{
-	background-image: url("/Users/ManasSaha/Desktop/My/Programming/WEB/Project/Spendify/src/assets/John Murray.jpg");
+.P1 {
+	background-image: url("./assets/John Murray.jpg");
 }
 
-.P2{
+.P2 {
 	background-position: top;
-	background-image: url("/Users/ManasSaha/Desktop/My/Programming/WEB/Project/Spendify/src/assets/Samantha Lee.jpg");
+	background-image: url("./assets/Samantha Lee.jpg");
 }
 
-.P3{
-	background-image: url("/Users/ManasSaha/Desktop/My/Programming/WEB/Project/Spendify/src/assets/Sarah Thompson.jpg");
+.P3 {
+	background-image: url("./assets/Sarah Thompson.jpg");
 }
 
 .card-body {
@@ -313,4 +303,50 @@ body {
 	letter-spacing: 0em;
 	line-height: 1.5;
 	text-align: left;
+}
+
+/*^ Login Modal */
+
+.Modal-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 2rem 1rem;
+	transform: translate(-50%, -50%);
+	width: fit-content;
+	background-color: white;
+	border: 2px solid #000000;
+	border-radius: 1rem;
+}
+
+.form-container {
+	display: flex;
+	justify-content: center;
+}
+.form-field {
+	display: flex;
+	align-items: baseline;
+	min-width: max-content;
+	padding: 0 1rem;
+	/* background: wheat; */
+}
+
+.form-field label {
+	padding: 0.5rem;
+	margin: 0.5rem;
+}
+
+form input {
+	padding-left: 0.4rem;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+}
+
+.btn {
+	border: 2px solid #017bfe;
+	margin: 1rem;
+	min-width: 7vw;
 }

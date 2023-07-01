@@ -28,9 +28,9 @@ export default function Features() {
 							</p>
 						</li>
 					</ul>
-						<div className="f-img-container">
-							<img src={image} alt="" className="f-img" />
-						</div>
+					<div className="f-img-container">
+						<img src={image} alt="" className="f-img" />
+					</div>
 				</div>
 			</div>
 		</>

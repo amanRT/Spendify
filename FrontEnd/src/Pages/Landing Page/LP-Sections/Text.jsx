@@ -1,5 +1,5 @@
-import t_squiggle from "../../../assets/Text-section squiggle.jpg";
-import b_squiggle from "../../../assets/T_section.jpg";
+import t_squiggle from "../../../assets/Text-section squiggle.png";
+import b_squiggle from "../../../assets/T_section.png";
 
 export default function Text() {
 	return (
@@ -17,7 +17,7 @@ export default function Text() {
 							the way individuals and businesses manage their finances.
 						</p>
 						<div className="t_image-container-2">
-							<img src={b_squiggle} alt="" className="t_image"/>
+							<img src={b_squiggle} alt="" className="t_image" />
 						</div>
 					</div>
 				</div>
