@@ -1,0 +1,12 @@
+{
+  "name": "spendify",
+  "version": "1.0.0",
+  "description": "\"Spendify\" is a MERN-based web application that offers an innovative and compelling solution to the expense tracking problem. It will revolutionize the way individuals and businesses manage their finances by providing the following features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
