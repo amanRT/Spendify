@@ -2,7 +2,8 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 const bcrypt = require("bcrypt");
-
+const express = require("express");
+const app = express();
 const userSchema = require("./Models/Users");
 const passport = require("passport");
 const flash = require("express-flash");
