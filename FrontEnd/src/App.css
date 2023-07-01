@@ -1,0 +1,316 @@
+/** Landing Page */
+body {
+	background-color: black;
+}
+/*^ Hero Section */
+.Hero {
+	position: absolute;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	height: min-content;
+	display: flex;
+	justify-content: flex-start;
+	padding: 10vw;
+	background-color: #ffffff;
+	min-height: 50vw;
+	overflow: visible;
+	position: relative;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+.brand-slogan {
+	flex-shrink: 0;
+	max-width: 50vw;
+	height: auto; /* 238px */
+	z-index: 2;
+	font-size: 3rem;
+	font-weight: 600;
+	font-style: normal;
+	font-family: "Poppins", sans-serif;
+	color: #540d6e;
+	line-height: 1.1;
+	text-align: left;
+}
+
+.getStarted {
+	letter-spacing: 0.5px;
+	flex-shrink: 0;
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 0.8rem 1rem 0.8rem 1rem;
+	background-image: linear-gradient(to right, #00fafc, #f854d9);
+	position: relative;
+	align-content: center;
+	gap: 10;
+	color: white;
+	border-radius: 2rem;
+	border-color: white;
+	cursor: pointer;
+}
+
+.img-section {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.image {
+	width: 50rem;
+}
+
+/*^ Text Section */
+.Text {
+	position: relative;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	align-items: center;
+	padding: 8vw 10vw;
+	background-color: #000000;
+	overflow: hidden;
+	flex: 1 0 0px;
+	align-content: center;
+	flex-wrap: nowrap;
+	z-index: -2;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.text-image {
+	width: 18rem;
+}
+
+.text-container {
+	width: 40vw;
+}
+.text-container h1 {
+	font-family: "Unbounded", sans-serif;
+	line-height: 1.2;
+	text-align: left;
+	overflow: visible;
+	flex: 1 0 0px;
+	font-weight: 700;
+	font-size: 3rem;
+	color: rgb(220, 152, 26);
+	letter-spacing: 3px;
+}
+.text-container p {
+	color: #3bceac;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	text-align: left;
+	font-family: "Nunito", "Nunito Placeholder", sans-serif;
+}
+
+.t_image {
+	width: 45rem;
+}
+
+.t_image-container-2 {
+	position: absolute;
+	z-index: -1;
+	top: -7vw;
+	right: -7vw;
+}
+
+/*^ Features Section */
+.Features {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	flex-shrink: 0;
+	padding: 8vw 10vw;
+	overflow: hidden;
+	flex: 1 0 0px;
+	flex-wrap: nowrap;
+	z-index: -2;
+}
+.f-heading {
+	flex-shrink: 0;
+	overflow: visible;
+	width: 100%;
+	flex: 1 0 0px;
+	position: relative;
+	font-weight: 700;
+	font-style: normal;
+	font-family: "Unbounded", sans-serif;
+	color: #ee4266;
+	font-size: 3rem;
+	line-height: 1.2;
+	text-align: left;
+}
+
+.f-content{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.f-list {
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	overflow: visible;
+	flex: 1 0 0px;
+	flex-wrap: nowrap;
+	gap: 2rem;
+	list-style: none;
+}
+
+.f-list h2 {
+	flex-shrink: 0;
+	height: auto;
+	flex: 1 0 0px;
+	position: relative;
+	font-weight: 400;
+	font-style: normal;
+	font-family: "Nunito", "Nunito Placeholder", sans-serif;
+	color: #ee4266;
+	font-size: 1.7rem;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.f_list-dscrp {
+	overflow: visible;
+	flex: 1 0 0px;
+	position: relative;
+	font-weight: 400;
+	font-style: normal;
+	font-family: "Nunito", "Nunito Placeholder", sans-serif;
+	color: #3bceac;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.f-img{
+	width: 35vw;
+	border-radius: 0.5rem;
+}
+
+/*^ Review Section */
+.Review {
+	position: relative;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 8vw 10vw;
+	background-color: #000000;
+	overflow: hidden;
+	flex: 1 0 0px;
+	color: #ffffff;
+}
+
+.review-cards {
+	display: flex;
+	flex-direction: row;
+	flex: 1 0 0px;
+}
+
+.r-card {
+	position: relative;
+	flex-shrink: 0;
+	flex: 1 0 0px;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	border-radius: 3rem;
+	height: 30vw;
+}
+
+.card-img {
+	flex-shrink: 0;
+	width: 3rem;
+	margin: 2rem 1.6rem;
+	overflow: hidden;
+	aspect-ratio: 1 / 1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 3rem;
+	background-position: center;
+	border: 2px solid red;
+}
+
+.P1{
+	background-image: url("/Users/ManasSaha/Desktop/My/Programming/WEB/Project/Spendify/src/assets/John Murray.jpg");
+}
+
+.P2{
+	background-position: top;
+	background-image: url("/Users/ManasSaha/Desktop/My/Programming/WEB/Project/Spendify/src/assets/Samantha Lee.jpg");
+}
+
+.P3{
+	background-image: url("/Users/ManasSaha/Desktop/My/Programming/WEB/Project/Spendify/src/assets/Sarah Thompson.jpg");
+}
+
+.card-body {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	overflow: hidden;
+	height: 16vw;
+}
+
+.card-dscrp {
+	font-weight: 400;
+	font-style: normal;
+	font-family: "Nunito", "Nunito Placeholder", sans-serif;
+	color: #ffffff;
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.card-name {
+	margin-top: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-family: "Nunito", "Nunito Placeholder", sans-serif;
+	color: #ffffff;
+	font-size: 0.7rem;
+	line-height: 1.5;
+	text-align: left;
+}
+
+/*^ Footer Section */
+
+.Footer {
+	position: relative;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 8vw 10vw;
+	overflow: hidden;
+	flex: 1 0 0px;
+}
+
+.fo-Text {
+	color: #0ead69;
+	overflow: visible;
+	position: relative;
+	font-weight: 400;
+	font-style: normal;
+	font-family: "Nunito", "Nunito Placeholder", sans-serif;
+	font-size: 16px;
+	letter-spacing: 0em;
+	line-height: 1.5;
+	text-align: left;
+}
