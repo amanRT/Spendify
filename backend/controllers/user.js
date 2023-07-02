@@ -1,79 +1,71 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
-const bcrypt = require("bcrypt");
 const express = require("express");
-const app = express();
-const userSchema = require("./Models/Users");
-const passport = require("passport");
-const flash = require("express-flash");
-const session = require("express-session");
-const initializePassport = require("./passport-config");
-initializePassport(
-  passport,
-  (email) => users.find((user) => user.email === email),
-  (id) => users.find((user) => user.id === id)
-);
-app.use(express.urlencoded({ extended: "false" }));
-app.use(express.json());
-app.use(flash());
 
-app.use(
-  session({
-    secret: precoess.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
+const jwt = require("jsonwebtoken");
+const asyncHandler = require("express-async-handler");
+const bcrypt = require("bcrypt");
+const User = require("../Models/Users");
+require("dotenv").config();
 
-app.post("/auth/register", checknotAuthenticated, (req, res) => {
-  try {
-    const { name, email, password, password_confirm } = req.body;
-    if (password !== password_confirm) {
-      return res.render("/auth/register", {
-        message: "Passwords do not match!",
-      });
-    } else {
-      const hashedPassword = bcrypt.hash(password, 10);
-      const newUser = new User({
-        name,
-        email,
-        password: hashedPassword,
-      });
-      newUser.save().then((res) => console.log(res));
-    }
+const registerUser = asyncHandler(async (req, res) => {
+  const { username, email, password } = req.body;
+  if (!username || !password || !password) {
+    res.status(400);
+    throw new Error("All fields are mandatory");
+  }
+  const userAvail = await User.findOne({ email });
+  if (userAvail) {
+    res.status(400);
+    throw new Error("User already exists");
+  }
 
-    res.redirect("#");
-  } catch {
-    res.redirect("/auth/register");
+  //hash password
+  const hashedPassword = await bcrypt.hash(password, 10);
+  //   console.log(hashedPassword);
+  const user = await User.create({
+    username,
+    email,
+    password: hashedPassword,
+  });
+
+  //   console.log(user);
+
+  if (user) {
+    res.status(201).json({ _id: user._id, email: user.email });
+  } else {
+    res.status(400);
+    throw new Error("User data is not valid");
+  }
+
+  res.json({ message: "Register the user" });
+});
+const loginUser = asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+  if (!email || !password) {
+    res.status(400);
+    throw new Error("All fields are mandotort");
+  }
+  const user = await User.findOne({ email });
+  //cpmapare pass with hashed
+  if (user && (await bcrypt.compare(password, user.password))) {
+    const accessToken = jwt.sign(
+      {
+        user: {
+          username: user.username,
+          email: user.email,
+          id: user.id,
+        },
+      },
+      process.env.ACCESS_TOKEN_SECRET,
+      { expiresIn: "1h" }
+    );
+    res.status(200).json({ accessToken });
+  } else {
+    res.status(401);
+    throw new Error("password is not valid");
   }
 });
-app.post(
-  "/auth/login",
-  checknotAuthenticated,
-  passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/auth/login",
-    failureFlash: true,
-  })
-);
-app.delete("/auth/logout", (req, res) => {
-  req.logOut();
-  res.redirect('"/auth/login" ');
+const currentUser = asyncHandler(async (req, res) => {
+  res.json(req.user);
 });
 
-//for checking the user is authenticated or not
-function checkAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-  }
-  res.redirect("/auth/login");
-}
-function checknotAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return res.redirect("/");
-  }
-  next();
-}
+module.exports = { registerUser, loginUser, currentUser };

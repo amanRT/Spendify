@@ -19,11 +19,17 @@ const travellingSchema = new mongoose.Schema({
 });
 
 // Schema for UserInfo
-const userInfoSchema = new mongoose.Schema({
-  name: String,
-  food: foodSchema,
-  outing: outingSchema,
-  travelling: travellingSchema,
-});
+const userInfoSchema = new mongoose.Schema(
+  {
+    user_id: String,
+    name: String,
+    food: foodSchema,
+    outing: outingSchema,
+    travelling: travellingSchema,
+  },
+  {
+    timestamps: true,
+  }
+);
 
 module.exports = mongoose.model("UserInfo", userInfoSchema);
