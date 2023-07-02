@@ -2,11 +2,14 @@ const express = require("express");
 const router = require("./Router/routes");
 const mongoose = require("mongoose");
 const userSchema = require("./Models/Users");
+const cors = require("cors");
 const app = express();
 const PORT = 3000;
 
 // const User = mongoose.model("User", userSchema);
 app.use(express.json());
+app.use(cors());
+
 app.use("/api/v1/", router); //basic routes
 
 app.get("/", (req, res) => {
