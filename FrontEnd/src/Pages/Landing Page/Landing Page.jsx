@@ -1,17 +1,17 @@
-import Hero from "./LP-Sections/Hero";
-import Text from "./LP-Sections/Text";
-import Features from "./LP-Sections/Features";
-import Review from "./LP-Sections/Review";
-import Footer from "./LP-Sections/Footer";
+import Hero from "../Landing Page/LP-Sections/Hero";
+import Text from "../Landing Page/LP-Sections/Text";
+import Features from "../Landing Page/LP-Sections/Features";
+import Review from "../Landing Page/LP-Sections/Review";
+import Footer from "../Landing Page/LP-Sections/Footer";
 
 export default function LandingPage() {
 	return (
 		<>
-			<Hero />
+			<Hero/>
 			<Text />
 			<Features />
 			<Review />
-			<Footer/>
+			<Footer />
 		</>
 	);
 }
