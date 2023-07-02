@@ -5,7 +5,7 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Form from "./Form";
 
-export default function LoginModal(props) {
+export default function FormModal(props) {
 	return (
 		<div>
 			<Modal

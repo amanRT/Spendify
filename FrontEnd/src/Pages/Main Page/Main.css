@@ -1,0 +1,100 @@
+body {
+	background-color: black;
+}
+
+/*^ NavBar */
+.navbar {
+	background-color: rgb(167, 192, 213);
+	border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+	color: #3eaf95;
+	font-size: 2vw;
+	letter-spacing: 0.3rem;
+	font-family: "Unbounded", sans-serif;
+}
+
+.navbar-brand:hover {
+	color: #3eaf95;
+}
+
+.nav-link {
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: "Nunito", "Nunito Placeholder", sans-serif;
+	font-size: 1rem;
+	padding: 0.5rem 1.2rem;
+	margin: 0 1rem;
+}
+.nav-link:hover {
+	background-color: #123448;
+	color: white;
+	font-weight: 800;
+	border-radius: 1.2rem;
+}
+
+/*^ Expense */
+
+.Expense {
+	background-color: rgb(167, 192, 213);
+	color: white;
+	position: relative;
+	padding-top: clamp(2vw, 4vw, 8vw);
+	padding-bottom: clamp(4vw, 8vw, 14vw);
+	padding-left: clamp(4vw, 8vw, 12vw);
+	padding-right: clamp(4vw, 8vw, 12vw);
+	overflow: hidden;
+	z-index: -2;
+}
+
+.e-content {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 0;
+}
+
+.e-content h1 {
+	font-family: "Unbounded", sans-serif;
+	line-height: 1.2;
+	text-align: left;
+	font-weight: 900;
+	font-size: clamp(3vw, 3vw, 7vw);
+	letter-spacing: 3px;
+	color: #ee4165;
+	padding-top: 0;
+}
+
+.button-container {
+	padding: 1vw 3vw;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+
+.expense-button {
+	position: relative;
+	align-self: center;
+	padding: 1rem;
+	cursor: pointer;
+	display: flex;
+	font-family: "Montserrat", sans-serif;
+	background: #37ba9c;
+	text-align: center;
+	color: white;
+	font-size: 1.125em;
+	font-weight: 700;
+	border: none;
+	letter-spacing: 0.3em;
+	text-decoration: none;
+	border-radius: 0.5px;
+}
+
+.e-img-container img {
+	max-width: 20vw;
+	border-radius: 1rem;
+}

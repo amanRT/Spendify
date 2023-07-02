@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Popper from "./Popper";
+import { Link } from "react-router-dom";
 
 function Input({ name, user, f_name, type, handleChange }) {
 	return (
@@ -11,6 +12,7 @@ function Input({ name, user, f_name, type, handleChange }) {
 }
 
 export default function Form() {
+	
 	//* Form State :
 	const [form, setForm] = useState(false);
 
@@ -87,17 +89,17 @@ export default function Form() {
 					/>
 				)}
 				<br />
-				<div className="button-container">
-					<button className="sign" onClick={handleSubmit}>
+				<div className="button-container" onClick={handleSubmit}>
+					<Link to="/Spendify" className="sign">
 						{form ? "Sign up" : "Sign in"}
-					</button>
+					</Link>
 				</div>
+				<br />
 				<p className="signup">
 					Don't have an account?
 					<a
 						rel="noopener noreferrer"
 						href="#"
-						className=""
 						onClick={handleForm}
 					>
 						{form ? "Login" : "Register"}

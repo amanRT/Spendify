@@ -1,3 +1,4 @@
+import "./Landing.css";
 import Hero from "../Landing Page/LP-Sections/Hero";
 import Text from "../Landing Page/LP-Sections/Text";
 import Features from "../Landing Page/LP-Sections/Features";

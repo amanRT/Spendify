@@ -1,6 +1,7 @@
 import Squiggle from "../../../assets/Squiggle.png";
 import { useState } from "react";
-import LoginModal from "../Utility/LoginModal";
+import LoginModal from "../../../Utility/FormModal";
+import "../Landing.css";
 
 export default function Hero() {
 	const [open, setOpen] = useState(false);
@@ -10,7 +11,7 @@ export default function Hero() {
 	return (
 		<>
 			<section className="Hero">
-				<div className="slogan-container">
+				<div className="slgan-container_">
 					<div className="brand-slogan">
 						<h1>Unleash Your Finances with Spendify</h1>
 					</div>
