@@ -9,8 +9,8 @@ function Analytics() {
     labels: UserData.map((data) => data.year),
     datasets: [
       {
-        label: "Users Gained",
-        data: UserData.map((data) => data.userGain),
+        label: "Monthly Expense",
+        data: UserData.map((data) => data.userExpense),
         backgroundColor: [
           "rgba(75,192,192,1)",
           "#ecf0f1",
