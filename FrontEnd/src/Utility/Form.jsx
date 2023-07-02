@@ -12,6 +12,7 @@ function Input({ name, user, f_name, type, handleChange }) {
 }
 
 export default function Form() {
+	
 	//* Form State :
 	const [form, setForm] = useState(false);
 

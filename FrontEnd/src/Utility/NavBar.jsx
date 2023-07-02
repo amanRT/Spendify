@@ -32,6 +32,9 @@ export default function NavBar() {
 							</Link>
 						</li>
 					</ul>
+						<button type="button" class="btn btn-outline-danger">
+							Logout
+						</button>
 				</div>
 			</nav>
 		</>

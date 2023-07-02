@@ -9,7 +9,7 @@ export default function Expense() {
 						<h1>TRACK YOUR EXPENSE...</h1>
 					</div>
 					<button className="expense-button">
-						<span>Check Expense</span>
+						Check Expense
 					</button>
 				</div>
 				<div className="e-img-container">

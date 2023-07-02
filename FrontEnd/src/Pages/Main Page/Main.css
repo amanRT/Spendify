@@ -4,19 +4,19 @@ body {
 
 /*^ NavBar */
 .navbar {
-	background-color: rgb(209, 222, 233);
-   border-bottom: 2px solid black;
+	background-color: rgb(167, 192, 213);
+	border-bottom: 2px solid black;
 }
 
 .navbar-brand {
-	color: #37ba9c;
+	color: #3eaf95;
 	font-size: 2vw;
 	letter-spacing: 0.3rem;
 	font-family: "Unbounded", sans-serif;
 }
 
 .navbar-brand:hover {
-	color: #37ba9c;
+	color: #3eaf95;
 }
 
 .nav-link {
@@ -26,19 +26,19 @@ body {
 	font-family: "Nunito", "Nunito Placeholder", sans-serif;
 	font-size: 1rem;
 	padding: 0.5rem 1.2rem;
-	margin-right: 0.6rem;
+	margin: 0 1rem;
 }
 .nav-link:hover {
-	color: #ee4165;
-	background-color: rgba(190, 190, 190, 0.779);
+	background-color: #123448;
+	color: white;
+	font-weight: 800;
 	border-radius: 1.2rem;
 }
 
 /*^ Expense */
 
 .Expense {
-
-   background-color: rgb(209, 222, 233);
+	background-color: rgb(167, 192, 213);
 	color: white;
 	position: relative;
 	padding-top: clamp(2vw, 4vw, 8vw);
@@ -50,11 +50,11 @@ body {
 }
 
 .e-content {
-   position: relative;
+	position: relative;
 	display: flex;
 	flex-direction: row;
-   justify-content: space-between;
-   padding: 0;
+	justify-content: space-around;
+	padding: 0;
 }
 
 .e-content h1 {
@@ -65,7 +65,7 @@ body {
 	font-size: clamp(3vw, 3vw, 7vw);
 	letter-spacing: 3px;
 	color: #ee4165;
-   padding-top: 0;
+	padding-top: 0;
 }
 
 .button-container {
@@ -73,33 +73,28 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-   justify-content: space-around;
+	justify-content: space-around;
 }
 
 .expense-button {
 	position: relative;
+	align-self: center;
+	padding: 1rem;
+	cursor: pointer;
 	display: flex;
 	font-family: "Montserrat", sans-serif;
-	padding: 3vw 2vw;
-	border: none;
-   padding: 0;
-   position: relative;
-   left: 14vw;
-}
-
-.expense-button span {
 	background: #37ba9c;
 	text-align: center;
-	text-decoration: none;
 	color: white;
-	width: 100%;
-	padding: 18px 25px;
 	font-size: 1.125em;
 	font-weight: 700;
+	border: none;
 	letter-spacing: 0.3em;
+	text-decoration: none;
+	border-radius: 0.5px;
 }
 
-.e-img-container img{
-   width: 20vw;
-   border-radius: 1rem;
+.e-img-container img {
+	max-width: 20vw;
+	border-radius: 1rem;
 }
