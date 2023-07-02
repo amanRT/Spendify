@@ -1,6 +1,6 @@
 import Squiggle from "../../../assets/Squiggle.png";
 import { useState } from "react";
-import LoginModal from "./LoginModal";
+import LoginModal from "../Utility/LoginModal";
 
 export default function Hero() {
 	const [open, setOpen] = useState(false);
