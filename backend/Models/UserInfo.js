@@ -23,6 +23,7 @@ const userInfoSchema = new mongoose.Schema(
   {
     user_id: String,
     name: String,
+    budget: { type: Number, required: [true, "Please enter budget"] },
     food: foodSchema,
     outing: outingSchema,
     travelling: travellingSchema,
