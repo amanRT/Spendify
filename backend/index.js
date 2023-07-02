@@ -5,7 +5,8 @@ const userSchema = require("./Models/Users");
 const app = express();
 const PORT = 3000;
 
-const User = mongoose.model("User", userSchema);
+// const User = mongoose.model("User", userSchema);
+app.use(express.json());
 app.use("/api/v1/", router); //basic routes
 
 app.get("/", (req, res) => {
@@ -23,6 +24,12 @@ const start = async () => {
     console.log(err);
   }
 };
+
+// const newUser = new User({
+//   name: "John Doe",
+//   email: "johndoe@example.com",
+//   password: "23245",
+// });
 
 // // Save the new user to the database
 // newUser.save().then((res) => console.log(res));
