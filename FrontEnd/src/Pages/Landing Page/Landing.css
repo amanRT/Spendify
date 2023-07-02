@@ -348,14 +348,12 @@ h1 {
 	margin-top: 1rem;
 }
 
-.input-group label{
-	margin-right: 1rem;
-}
-
 .input-group {
 	margin-top: 0.25rem;
 	font-size: 0.875rem;
 	line-height: 1.25rem;
+	display: flex;
+	flex-direction: column;
 	min-width: 70%;
 }
 
@@ -370,7 +368,7 @@ h1 {
 	border-radius: 0.375rem;
 	border: 2px solid rgba(55, 65, 81, 1);
 	outline: 0;
-	margin-bottom: 0.3rem;
+	margin-bottom: 0.5rem;
 	background-color: #211f1f;
 	padding: 0.75rem 1rem;
 	color: rgba(243, 244, 246, 1);

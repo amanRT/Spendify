@@ -3,9 +3,18 @@ import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import Form from "./Form";
+import { useState } from "react";
+import BillForm from "./BillForm";
+import UserForm from "./UserForm";
 
-export default function FormModal(props) {
+export default function EFormModal(props) {
+	// formType  = false -> Bill
+	// formType  = true -> UserInfo
+	const [formType, setType] = useState(true);
+	function handleClick() {
+		setType((prev) => !prev);
+	}
+
 	return (
 		<div>
 			<Modal
@@ -23,7 +32,12 @@ export default function FormModal(props) {
 			>
 				<Fade in={props.open}>
 					<Box className="Modal-box">
-						<Form />
+						{formType ? <UserForm /> : <BillForm />}
+						<div className="signup">
+                            <p onClick={handleClick} >
+                                {formType ? "Bill" : "User"} Form
+                            </p>
+                        </div>
 					</Box>
 				</Fade>
 			</Modal>
