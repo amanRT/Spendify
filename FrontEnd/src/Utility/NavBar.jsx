@@ -32,7 +32,7 @@ export default function NavBar() {
 							</Link>
 						</li>
 					</ul>
-						<button type="button" class="btn btn-outline-danger">
+						<button type="button" className="btn btn-outline-danger">
 							Logout
 						</button>
 				</div>

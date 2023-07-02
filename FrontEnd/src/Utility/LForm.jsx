@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Popper from "./Popper";
 import { Link } from "react-router-dom";
+import "../Pages/Landing Page/Landing.css"
 
 function Input({ name, user, f_name, type, handleChange }) {
 	return (
@@ -12,7 +13,6 @@ function Input({ name, user, f_name, type, handleChange }) {
 }
 
 export default function Form() {
-	
 	//* Form State :
 	const [form, setForm] = useState(false);
 
@@ -97,11 +97,7 @@ export default function Form() {
 				<br />
 				<p className="signup">
 					Don't have an account?
-					<a
-						rel="noopener noreferrer"
-						href="#"
-						onClick={handleForm}
-					>
+					<a rel="noopener noreferrer" href="#" onClick={handleForm}>
 						{form ? "Login" : "Register"}
 					</a>
 				</p>
