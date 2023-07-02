@@ -1,6 +1,6 @@
 import Squiggle from "../../../assets/Squiggle.png";
 import { useState } from "react";
-import LoginModal from "../../../Utility/FormModal";
+import LoginModal from "../../../Utility/LFormModal";
 import "../Landing.css";
 
 export default function Hero() {
