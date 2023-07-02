@@ -22,13 +22,10 @@ export default function UserForm() {
 	function handleChange(event) {
 		const { name, value } = event.target;
 
-		console.log(selectSchema === "food");
-
-		console.log(schema_info);
 		setSchemaInfo((prev) => ({
 			...prev,
 			[selectSchema]: {
-				...prev.selectSchema,
+				...prev[selectSchema],
 				[name]: value,
 			},
 		}));
